@@ -16,7 +16,7 @@ contract ERC20Test is ERC20 {
     * @param account The account that will receive the created tokens.
     * @param amount The amount that will be created.
     */
-    function mint(address account, uint256 amount) public {
+    function mint(address account, uint256 amount) public payable {
         require(msg.sender == owner);
         require(account != 0);
         _totalSupply = _totalSupply.add(amount);
